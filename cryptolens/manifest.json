@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "CryptoLens Pro",
+  "version": "3.0",
+  "description": "View cryptocurrency prices, charts, and set alerts on any website",
+  "permissions": ["storage", "alarms", "notifications"],
+  "host_permissions": ["https://api.coingecko.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [{
+    "resources": ["chart.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
