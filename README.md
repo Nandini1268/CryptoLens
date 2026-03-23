@@ -14,6 +14,7 @@ HTML + CSS + JavaScript · Chrome Manifest V3 · CoinGecko API
 ## Team
 - Degala Nandhini
 - Akshaya C
+- Updated by Akshaya
 
 ## How to Install
 1. Download the ZIP
